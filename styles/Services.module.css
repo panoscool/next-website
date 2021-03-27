@@ -1,0 +1,70 @@
+.my-services {
+  background-color: var(--clr-dark);
+  background-image: url('https://source.unsplash.com/random/800x800');
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: var(--clr-light);
+  text-align: center;
+  position: relative;
+}
+
+.my-services::before,
+.my-services::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 50px;
+  transform: skewY(-3deg);
+  background-color: white;
+}
+
+.my-services::before {
+  top: -50px;
+}
+
+.my-services::after {
+  bottom: -50px;
+}
+
+.section__title--services {
+  color: var(--clr-accent);
+  position: relative;
+}
+
+.section__title--services::after {
+  content: '';
+  display: block;
+  width: 2em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  opacity: 0.25;
+}
+
+.service_title {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.services {
+  margin-bottom: 4em;
+}
+
+.service {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .services {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service + .service {
+    margin-left: 2em;
+  }
+}
